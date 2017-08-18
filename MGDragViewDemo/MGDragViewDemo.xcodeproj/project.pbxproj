@@ -13,9 +13,13 @@
 		C0B8CFA01F46CFD000DBD937 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B8CF9E1F46CFD000DBD937 /* Main.storyboard */; };
 		C0B8CFA21F46CFD000DBD937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B8CFA11F46CFD000DBD937 /* Assets.xcassets */; };
 		C0B8CFA51F46CFD000DBD937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B8CFA31F46CFD000DBD937 /* LaunchScreen.storyboard */; };
+		EF6B48E92EC184A8FCE8CD6F /* libPods-MGDragViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 861BF2B1C63B6F26803F2D7D /* libPods-MGDragViewDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E8136BCB4816A404AFC80BA /* Pods-MGDragViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGDragViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MGDragViewDemo/Pods-MGDragViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		73EADA0E3337E0A624ABC46B /* Pods-MGDragViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGDragViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGDragViewDemo/Pods-MGDragViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		861BF2B1C63B6F26803F2D7D /* libPods-MGDragViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MGDragViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B8CF921F46CFD000DBD937 /* MGDragViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGDragViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B8CF961F46CFD000DBD937 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0B8CF981F46CFD000DBD937 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6B48E92EC184A8FCE8CD6F /* libPods-MGDragViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39C8B2E930E3BDCA66106D49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73EADA0E3337E0A624ABC46B /* Pods-MGDragViewDemo.debug.xcconfig */,
+				5E8136BCB4816A404AFC80BA /* Pods-MGDragViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C0B8CF891F46CFD000DBD937 = {
 			isa = PBXGroup;
 			children = (
 				C0B8CF941F46CFD000DBD937 /* MGDragViewDemo */,
 				C0B8CF931F46CFD000DBD937 /* Products */,
+				39C8B2E930E3BDCA66106D49 /* Pods */,
+				C267A5D816F17D889DB485A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C267A5D816F17D889DB485A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				861BF2B1C63B6F26803F2D7D /* libPods-MGDragViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0B8CFA91F46CFD000DBD937 /* Build configuration list for PBXNativeTarget "MGDragViewDemo" */;
 			buildPhases = (
+				3CE7608182526A4C74CE8546 /* [CP] Check Pods Manifest.lock */,
 				C0B8CF8E1F46CFD000DBD937 /* Sources */,
 				C0B8CF8F1F46CFD000DBD937 /* Frameworks */,
 				C0B8CF901F46CFD000DBD937 /* Resources */,
+				A66A31587538DB5965CB0AE5 /* [CP] Embed Pods Frameworks */,
+				A12C5C4D1B3639401A5DE18C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CE7608182526A4C74CE8546 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A12C5C4D1B3639401A5DE18C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MGDragViewDemo/Pods-MGDragViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A66A31587538DB5965CB0AE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MGDragViewDemo/Pods-MGDragViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0B8CF8E1F46CFD000DBD937 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		C0B8CFAA1F46CFD000DBD937 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73EADA0E3337E0A624ABC46B /* Pods-MGDragViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H54L47S422;
@@ -283,6 +359,7 @@
 		};
 		C0B8CFAB1F46CFD000DBD937 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8136BCB4816A404AFC80BA /* Pods-MGDragViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H54L47S422;
