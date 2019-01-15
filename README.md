@@ -25,3 +25,11 @@ UIView *view0 = [[UIView alloc] initWithFrame:CGRectMake(120, 80, 70, 70)];
 
 
 ![111.gif](https://upload-images.jianshu.io/upload_images/1429890-329fdb9c80f2808f.gif?imageMogr2/auto-orient/strip)
+
+
+# Version
+MGDragView now is V0.0.1 .
+
+License
+-------
+DeeplinkNavigator is under MIT license. See the [LICENSE](LICENSE) file for more info.
