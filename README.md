@@ -1,5 +1,14 @@
 ## MGDragView
-* 一个简单可拖拽的View，只需导入分类头文件即可
+
+### From CocoaPods【使用CocoaPods】
+```ruby
+pod 'MGDragView'
+```
+
+### Manually【手动导入】
+```ruby
+一个简单可拖拽的View，只需导入分类头文件#import "UIView+Drag.h"即可
+```
 
 ![](http://upload-images.jianshu.io/upload_images/1429890-5546af72960d7dff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
